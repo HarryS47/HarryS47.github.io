@@ -1,3 +1,3 @@
 # For Isa...
-This is a website dedicated to Isa— Happy Birthday (or whatever day it is that this gets published)! Heres to many more celebrations with you!
+This is a website dedicated to Isa— Happy Birthday (or whatever day it is that this gets published)! Heres to many more celebrations with you! Sorry if the website still looks a bit rough, currently I want to make it look more modern, but I don't want to take the easy route by using templates—I want to do everything by hand, because you deserve nothing less :)
 
