@@ -1,0 +1,349 @@
+/* =========================================================
+   GLOBAL SETTINGS
+   ========================================================= */
+
+
+/* 
+   The * selector means "every element".
+
+   box-sizing: border-box makes width and height calculations
+   much easier to understand.
+*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*
+   Remove the browser's default spacing.
+
+   Browsers normally give <body> a small margin.
+   We don't want that for a full-screen game interface.
+*/
+html,
+body {
+    margin: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+   This controls the overall page.
+
+   overflow: hidden prevents the browser from creating
+   scrollbars if something extends slightly beyond the screen.
+*/
+body {
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================================
+   MAIN MENU / BACKGROUND
+   ========================================================= */
+
+
+/*
+   .menu is our main container.
+
+   Think of this as the "screen" of the game.
+
+   Everything else will be positioned relative to this.
+*/
+.menu {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    /*
+       A gradient gives us the blue Persona-style background.
+
+       "to bottom" means the gradient moves from top to bottom.
+    */
+    background: linear-gradient(
+        to bottom,
+        #19cde8,
+        #086bc7 45%,
+        #062c91
+    );
+
+    /*
+       White text will be our default text color.
+    */
+    color: white;
+}
+
+
+/* =========================================================
+   WALLET
+   ========================================================= */
+
+
+/*
+   The wallet is positioned independently from the menu.
+
+   "absolute" means we can tell the browser exactly where
+   this element should sit inside .menu.
+*/
+.wallet {
+    position: absolute;
+
+    /*
+       Distance from the top-left corner of .menu.
+    */
+    top: 50px;
+    left: 80px;
+
+    /*
+       White box similar to the screenshot.
+    */
+    background: white;
+
+    color: black;
+
+    /*
+       Border around the box.
+       
+       Syntax:
+       thickness | style | color
+    */
+    border: 2px solid black;
+
+    /*
+       Space INSIDE the box.
+    */
+    padding: 12px 25px;
+
+    /*
+       Gives us a little separation from other elements.
+    */
+    z-index: 10;
+}
+
+
+/*
+   The amount of money.
+*/
+.money {
+    font-size: 2rem;
+
+    font-weight: bold;
+}
+
+
+/*
+   "current wallet" underneath the money.
+*/
+.wallet-label {
+    font-size: 0.8rem;
+
+    font-style: italic;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+   ========================================================= */
+
+
+/*
+   This is the container holding:
+
+       SKILL
+       EQUIP
+       PERSONA
+       etc.
+*/
+.main-menu {
+    position: absolute;
+
+    /*
+       Position the entire menu approximately in the
+       center-right portion of the screen.
+    */
+    top: 30%;
+    left: 45%;
+
+    /*
+       Flexbox allows us to arrange the menu items easily.
+    */
+    display: flex;
+
+    /*
+       column = stack the items vertically.
+    */
+    flex-direction: column;
+
+    /*
+       Space between each menu item.
+    */
+    gap: 8px;
+
+    /*
+       Make sure the menu appears above the background.
+    */
+    z-index: 5;
+}
+
+
+/*
+   These are the actual menu links.
+*/
+.main-menu a {
+
+    /*
+       Remove the normal underline from links.
+    */
+    text-decoration: none;
+
+    /*
+       Make everything uppercase.
+    */
+    text-transform: uppercase;
+
+    /*
+       Make the text large.
+    */
+    font-size: clamp(2rem, 4vw, 4rem);
+
+    /*
+       900 makes the text very bold.
+
+       Not every font supports every weight, but 900
+       generally means "very bold".
+    */
+    font-weight: 900;
+
+    /*
+       Italic text contributes to the aggressive,
+       dynamic appearance of the Persona UI.
+    */
+    font-style: italic;
+
+    /*
+       Our default menu color.
+    */
+    color: #42e5ff;
+
+    /*
+       Make the lines closer together.
+    */
+    line-height: 0.8;
+
+    /*
+       Negative letter spacing pushes letters closer together.
+    */
+    letter-spacing: -2px;
+
+    /*
+       This makes movement between states smoother.
+    */
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* =========================================================
+   MENU HOVER EFFECT
+   ========================================================= */
+
+
+/*
+   :hover means:
+
+   "When the mouse is over this element..."
+*/
+.main-menu a:hover {
+
+    /*
+       Move the menu item 15 pixels to the right.
+    */
+    transform: translateX(15px);
+
+    /*
+       Change its color.
+    */
+    color: white;
+}
+
+
+/* =========================================================
+   SELECTED MENU ITEM
+   ========================================================= */
+
+
+/*
+   .selected is the menu item that is currently selected.
+
+   Remember that our HTML contains:
+
+       class="selected"
+*/
+.main-menu .selected {
+
+    /*
+       Make the selected item white.
+    */
+    color: white;
+
+    /*
+       Make it slightly larger.
+    */
+    transform: scale(1.05);
+
+    /*
+       Give the text a slight shadow.
+    */
+    text-shadow:
+        3px 3px 0 #0874c9,
+        6px 6px 0 #003c9c;
+}
+
+.party {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 5;
+}
+.controls {
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    text-align: right;
+    z-index: 10;
+}
+.buttons {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.buttons span {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    /*
+       Put the letter in the center.
+    */
+    align-items: center;
+    justify-content: center;
+
+    /*
+       White circle with blue text.
+    */
+    background: white;
+    color: #0643a7;
+    margin-left: 10px;
+}
