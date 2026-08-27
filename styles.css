@@ -16,7 +16,7 @@ body{
     overflow:hidden;
     color:white;
     background:
-        linear-gradient(180deg,rgba(36,199,24,.75) 0%,rgba(0,135,235,.8) 35%,rgba(0,35,150,.98) 100%);
+        linear-gradient(180deg,rgba(19, 234,9.75) 0%,rgba(34,199,29,.8) 35%,rgba(3,150,20,.98) 100%);
 }
 .menu::before{
     content:"";
@@ -79,7 +79,7 @@ body{
     display:block;
     width:max-content;
     padding:0 15px;
-    color:#29d9ff;
+    color: #08e74f;
     font-size:clamp(2.2rem,4.3vw,5rem);
     font-weight:900;
     font-style:italic;
@@ -87,7 +87,7 @@ body{
     letter-spacing:-4px;
     text-decoration:none;
     text-transform:uppercase;
-    text-shadow:3px 3px 0 rgba(0,80,190,.7);
+    text-shadow:3px 3px 0 rgba(0,150,30,.7);
     transition:.2s ease;
 }
 .main-menu a:nth-child(1){transform:translateX(20px) rotate(-3deg)}
