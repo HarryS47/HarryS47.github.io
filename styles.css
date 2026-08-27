@@ -40,7 +40,7 @@ body{
     z-index:2;
     opacity:.95;
 }
-.wallet{
+.clock-container {
     position:absolute;
     top:48px;
     left:8%;
@@ -52,18 +52,17 @@ body{
     transform:skew(-3deg);
     z-index:10;
 }
-.clock{
+.clock {
     font-size:2rem;
     font-weight:700;
     line-height:1;
 }
-.wallet-label{
+.clock-label {
     display:block;
     margin-top:4px;
     font-size:.75rem;
     font-weight:700;
     font-style:italic;
-    text-transform:lowercase;
 }
 .main-menu{
     position:absolute;
