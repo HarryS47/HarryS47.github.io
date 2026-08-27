@@ -1,0 +1,132 @@
+/* --- Core Variables & Reset --- */
+:root {
+    --bg-dark: #030712;
+    --p3-blue-dark: #0b1b3d;
+    --p3-blue-light: #00d2ff;
+    --p3-blue-bright: #38bdf8;
+    --p3-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--p3-white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Background Geometric Elements --- */
+.bg-stripe {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 50%;
+    height: 150%;
+    background: linear-gradient(135deg, var(--p3-blue-dark) 0%, transparent 70%);
+    transform: rotate(-15deg);
+    z-index: -1;
+    border-right: 4px solid var(--p3-blue-light);
+    opacity: 0.5;
+}
+
+/* --- Container Setup --- */
+.container {
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+}
+
+/* --- Persona 3 Slanted Header --- */
+.p3-header {
+    background: var(--p3-white);
+    color: var(--bg-dark);
+    display: inline-block;
+    padding: 10px 60px 10px 30px;
+    transform: skewX(-15deg);
+    margin-bottom: -10px;
+    margin-left: 20px;
+    box-shadow: -8px 8px 0px var(--p3-blue-light);
+    position: relative;
+    z-index: 2;
+}
+
+.p3-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    transform: skewX(0deg); /* Keeps the text legible inside the skewed box */
+}
+
+/* --- Main Card with Clip Path & Skew --- */
+.p3-card {
+    position: relative;
+    background: var(--p3-blue-dark);
+    border: 3px solid var(--p3-white);
+    padding: 40px;
+    /* This creates the jagged corner look on the bottom right */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+    box-shadow: 12px 12px 0px rgba(0, 210, 255, 0.3);
+}
+
+/* The neon cyan sub-border inside the card */
+.card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background: var(--p3-blue-light);
+}
+
+.p3-card h2 {
+    font-size: 2.2rem;
+    color: var(--p3-blue-light);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 0px var(--bg-dark);
+}
+
+.p3-card p {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    max-width: 80%;
+    color: #cbd5e1;
+}
+
+/* --- Interactive Persona Style Button --- */
+.p3-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--p3-blue-light);
+    color: var(--bg-dark);
+    text-decoration: none;
+    padding: 12px 35px;
+    font-size: 1.4rem;
+    transform: skewX(-12deg);
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.p3-btn span {
+    display: inline-block;
+    transform: skewX(12deg); /* Un-skews text so it stays crisp */
+}
+
+/* Hover Effects matching game UI snappiness */
+.p3-btn:hover {
+    background: var(--p3-white);
+    color: var(--bg-dark);
+    box-shadow: -5px 5px 0px var(--p3-blue-bright);
+    transform: skewX(-12deg) translate(4px, -4px);
+}
