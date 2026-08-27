@@ -16,7 +16,7 @@ body{
     overflow:hidden;
     color:white;
     background:
-        linear-gradient(180deg,rgba(0,220,255,.75) 0%,rgba(0,135,235,.8) 35%,rgba(0,35,150,.98) 100%);
+        linear-gradient(180deg,rgba(36,199,24,.75) 0%,rgba(0,135,235,.8) 35%,rgba(0,35,150,.98) 100%);
 }
 .menu::before{
     content:"";
