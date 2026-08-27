@@ -3,36 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P3 Style Portfolio</title>
+    <title>S.E.E.S. Terminal UI</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Using a bold, clean font similar to the game's UI -->
+    <!-- Importing Montserrat & Archivo for that ultra-heavy Gothic look -->
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Background decorative watermarks/stripes -->
-    <div class="bg-stripe"></div>
+    <!-- Dark Hour Background Overlay -->
+    <div class="p3-grid-bg"></div>
 
-    <div class="container">
-        <!-- Slanted Header Menu -->
-        <header class="p3-header">
-            <h1 class="p3-title">STATUS</h1>
-        </header>
-
-        <!-- Main Content Card with Clip-Path -->
-        <main class="p3-card">
-            <div class="card-accent"></div>
-            <div class="card-content">
-                <h2>HERO / LEVEL 99</h2>
-                <p>Web Developer & Designer. Specializing in high-contrast, kinetic user interfaces inspired by Atlus RPGs.</p>
-                
-                <!-- Stylized Action Button -->
-                <a href="https://github.com" class="p3-btn">
-                    <span>ENTER SYSTEM</span>
+    <!-- Main Navigation Menu -->
+    <nav class="p3-menu-container">
+        <ul>
+            <li class="p3-menu-item">
+                <!-- Hovering Shape Backdrop Layer -->
+                <div class="hover-shape"></div>
+                <a href="#status" class="p3-link">
+                    <span class="p3-text" data-text="STATUS">STATUS</span>
                 </a>
-            </div>
-        </main>
-    </div>
+            </li>
+            <li class="p3-menu-item">
+                <div class="hover-shape"></div>
+                <a href="#skills" class="p3-link">
+                    <span class="p3-text" data-text="SKILLS">SKILLS</span>
+                </a>
+            </li>
+            <li class="p3-menu-item">
+                <div class="hover-shape"></div>
+                <a href="#equip" class="p3-link">
+                    <span class="p3-text" data-text="EQUIP">EQUIP</span>
+                </a>
+            </li>
+            <li class="p3-menu-item">
+                <div class="hover-shape"></div>
+                <a href="#system" class="p3-link">
+                    <span class="p3-text" data-text="SYSTEM">SYSTEM</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
 </body>
 </html>
