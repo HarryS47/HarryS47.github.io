@@ -52,7 +52,7 @@ body{
     transform:skew(-3deg);
     z-index:10;
 }
-.money{
+.clock{
     font-size:2rem;
     font-weight:700;
     line-height:1;
