@@ -1,10 +1,10 @@
-/* --- Core Variables & Reset --- */
+/* --- Persona 3 Reload Theme Variables --- */
 :root {
-    --bg-dark: #030712;
-    --p3-blue-dark: #0b1b3d;
-    --p3-blue-light: #00d2ff;
-    --p3-blue-bright: #38bdf8;
+    --bg-midnight: #040914;
+    --p3-cyan: #00d2ff;
+    --p3-blue-deep: #0f2347;
     --p3-white: #ffffff;
+    --p3-shadow: rgba(0, 210, 255, 0.4);
 }
 
 * {
@@ -14,119 +14,116 @@
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--p3-white);
-    font-family: 'Barlow Condensed', sans-serif;
+    background-color: var(--bg-midnight);
+    font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    font-weight: 700;
-    overflow: hidden;
+    font-weight: 900;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    overflow: hidden;
 }
 
-/* --- Background Geometric Elements --- */
-.bg-stripe {
+/* --- Persona Stylized Grid Background --- */
+.p3-grid-bg {
     position: absolute;
-    top: -20%;
-    left: -10%;
-    width: 50%;
-    height: 150%;
-    background: linear-gradient(135deg, var(--p3-blue-dark) 0%, transparent 70%);
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(180deg, rgba(15,35,71,0.3) 0%, rgba(4,9,20,0.8) 100%);
+    z-index: -2;
+}
+.p3-grid-bg::before {
+    content: '';
+    position: absolute;
+    width: 200%; height: 200%;
+    top: -50%; left: -50%;
+    background-image: linear-gradient(rgba(0, 210, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 210, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
     transform: rotate(-15deg);
     z-index: -1;
-    border-right: 4px solid var(--p3-blue-light);
-    opacity: 0.5;
 }
 
-/* --- Container Setup --- */
-.container {
-    width: 90%;
-    max-width: 800px;
+/* --- Menu Architecture --- */
+.p3-menu-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.p3-menu-item {
     position: relative;
-}
-
-/* --- Persona 3 Slanted Header --- */
-.p3-header {
-    background: var(--p3-white);
-    color: var(--bg-dark);
     display: inline-block;
-    padding: 10px 60px 10px 30px;
-    transform: skewX(-15deg);
-    margin-bottom: -10px;
-    margin-left: 20px;
-    box-shadow: -8px 8px 0px var(--p3-blue-light);
-    position: relative;
-    z-index: 2;
+    padding: 10px 0;
+    cursor: pointer;
 }
 
-.p3-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    transform: skewX(0deg); /* Keeps the text legible inside the skewed box */
-}
-
-/* --- Main Card with Clip Path & Skew --- */
-.p3-card {
-    position: relative;
-    background: var(--p3-blue-dark);
-    border: 3px solid var(--p3-white);
-    padding: 40px;
-    /* This creates the jagged corner look on the bottom right */
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
-    box-shadow: 12px 12px 0px rgba(0, 210, 255, 0.3);
-}
-
-/* The neon cyan sub-border inside the card */
-.card-accent {
+/* --- The Dynamic Hovering Shape --- */
+/* Recreates the game's sudden geometric crosshair backdrop */
+.hover-shape {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 100%;
-    background: var(--p3-blue-light);
+    top: 50%;
+    left: -40px;
+    width: 320px;
+    height: 75px;
+    background: var(--p3-cyan);
+    transform: translateY(-50%) skewX(-20deg) scaleX(0);
+    transform-origin: left;
+    transition: transform 0.18s cubic-bezier(0.15, 0.85, 0.45, 1);
+    z-index: 1;
+    /* This creates a hard cut triangle notch on the right side of the shape */
+    clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+    box-shadow: -10px 10px 0px var(--p3-blue-deep);
 }
 
-.p3-card h2 {
-    font-size: 2.2rem;
-    color: var(--p3-blue-light);
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 0px var(--bg-dark);
-}
-
-.p3-card p {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    max-width: 80%;
-    color: #cbd5e1;
-}
-
-/* --- Interactive Persona Style Button --- */
-.p3-btn {
-    display: inline-block;
-    margin-top: 30px;
-    background: var(--p3-blue-light);
-    color: var(--bg-dark);
+/* --- Stylized Text Layers --- */
+.p3-link {
     text-decoration: none;
-    padding: 12px 35px;
-    font-size: 1.4rem;
-    transform: skewX(-12deg);
-    transition: all 0.2s ease-in-out;
-    border: 2px solid transparent;
-}
-
-.p3-btn span {
+    position: relative;
     display: inline-block;
-    transform: skewX(12deg); /* Un-skews text so it stays crisp */
+    z-index: 2;
+    transition: transform 0.15s ease;
 }
 
-/* Hover Effects matching game UI snappiness */
-.p3-btn:hover {
-    background: var(--p3-white);
-    color: var(--bg-dark);
-    box-shadow: -5px 5px 0px var(--p3-blue-bright);
-    transform: skewX(-12deg) translate(4px, -4px);
+.p3-text {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3.5rem;
+    color: var(--p3-white);
+    letter-spacing: -2px;
+    position: relative;
+    display: block;
+    transform: skewX(-10deg);
+    transition: color 0.15s ease, transform 0.15s ease;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Creates the overlapping dark offset text drop-shadow effect */
+.p3-text::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    color: var(--p3-blue-deep);
+    z-index: -1;
+    transition: all 0.15s ease;
+}
+
+/* --- Kinetic Hover Triggers --- */
+/* When hovering over an item, the shape pops out and the text pops forward */
+.p3-menu-item:hover .hover-shape {
+    transform: translateY(-50%) skewX(-20deg) scaleX(1);
+}
+
+.p3-menu-item:hover .p3-text {
+    color: var(--bg-midnight);
+    transform: skewX(-10deg) scale(1.1) translate(15px, -2px);
+    -webkit-text-stroke: 0px transparent;
+}
+
+/* Hides the drop offset text when hovered so it cleans up into the neon backdrop */
+.p3-menu-item:hover .p3-text::before {
+    opacity: 0;
+    transform: translate(-10px, 10px);
 }
