@@ -52,13 +52,11 @@ body{
     transform:skew(-3deg);
     z-index:10;
 }
-
 .money{
     font-size:2rem;
     font-weight:700;
     line-height:1;
 }
-
 .wallet-label{
     display:block;
     margin-top:4px;
@@ -67,8 +65,6 @@ body{
     font-style:italic;
     text-transform:lowercase;
 }
-
-/* ===== MAIN MENU ===== */
 .main-menu{
     position:absolute;
     top:22%;
@@ -79,7 +75,6 @@ body{
     z-index:10;
     transform:skew(-5deg);
 }
-
 .main-menu a{
     position:relative;
     display:block;
@@ -96,8 +91,6 @@ body{
     text-shadow:3px 3px 0 rgba(0,80,190,.7);
     transition:.2s ease;
 }
-
-/* Individual menu offsets */
 .main-menu a:nth-child(1){transform:translateX(20px) rotate(-3deg)}
 .main-menu a:nth-child(2){transform:translateX(0) rotate(-4deg)}
 .main-menu a:nth-child(3){transform:translateX(-12px) rotate(-5deg)}
@@ -106,15 +99,11 @@ body{
 .main-menu a:nth-child(6){transform:translateX(-5px) rotate(-5deg)}
 .main-menu a:nth-child(7){transform:translateX(15px) rotate(-4deg)}
 .main-menu a:nth-child(8){transform:translateX(0) rotate(-6deg)}
-
-/* Hover */
 .main-menu a:hover{
     color:#fff;
     transform:translateX(20px) scale(1.05) rotate(-4deg);
     text-shadow:4px 4px 0 #0755b8;
 }
-
-/* ===== SELECTED ITEM ===== */
 .main-menu .selected{
     color:#fff;
     text-shadow:
@@ -122,8 +111,6 @@ body{
         7px 7px 0 #073a9f;
     transform:translateX(5px) rotate(-7deg) scale(1.05);
 }
-
-/* Pink/white selection shape */
 .main-menu .selected::before{
     content:"";
     position:absolute;
@@ -137,8 +124,6 @@ body{
     z-index:-1;
     opacity:.9;
 }
-
-/* Black accent behind selected text */
 .main-menu .selected::after{
     content:"";
     position:absolute;
@@ -151,8 +136,6 @@ body{
     transform:translateY(-50%) translateX(-5px);
     z-index:-2;
 }
-
-/* ===== PARTY ===== */
 .party{
     position:absolute;
     top:30px;
@@ -162,7 +145,6 @@ body{
     gap:15px;
     z-index:15;
 }
-
 .party-member{
     position:relative;
     width:130px;
@@ -181,7 +163,6 @@ body{
     transform:skew(-12deg);
     box-shadow:4px 4px 0 rgba(0,45,140,.5);
 }
-
 .party-member::after{
     content:"";
     position:absolute;
@@ -192,8 +173,6 @@ body{
     background:#ffd928;
     transform:skew(-10deg);
 }
-
-/* ===== CONTROLS ===== */
 .controls{
     position:absolute;
     right:45px;
@@ -231,8 +210,6 @@ body{
     font-weight:900;
     text-shadow:none;
 }
-
-/* ===== DECORATIVE DIAGONAL BARS ===== */
 .wallet::before{
     content:"";
     position:absolute;
@@ -257,52 +234,42 @@ body{
     z-index:-1;
 }
 
-/* ===== RESPONSIVE ===== */
 @media(max-width:900px){
     .main-menu{
         left:35%;
     }
-
     .party{
         right:20px;
         transform:scale(.8);
         transform-origin:top right;
     }
-
     .wallet{
         left:30px;
     }
 }
-
 @media(max-width:650px){
     .menu::after{
         width:30%;
     }
-
     .wallet{
         top:25px;
         left:20px;
         width:170px;
     }
-
     .money{
         font-size:1.5rem;
     }
-
     .main-menu{
         top:28%;
         left:25%;
     }
-
     .main-menu a{
         font-size:clamp(1.8rem,9vw,3rem);
         letter-spacing:-2px;
     }
-
     .party{
         display:none;
     }
-
     .controls{
         right:20px;
         bottom:20px;
