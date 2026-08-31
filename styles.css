@@ -158,7 +158,7 @@ body{
     font-style:italic;
     text-transform:uppercase;
     background:rgba(0,80,50,.35);
-    border:2px solid #28dfff;
+    border:2px solid #37ff28;
     transform:skew(-12deg);
     box-shadow:4px 4px 0 rgba(34, 57, 105,.5);
 }
