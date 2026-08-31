@@ -157,10 +157,10 @@ body{
     font-weight:900;
     font-style:italic;
     text-transform:uppercase;
-    background:rgba(0,80,190,.35);
+    background:rgba(0,80,50,.35);
     border:2px solid #28dfff;
     transform:skew(-12deg);
-    box-shadow:4px 4px 0 rgba(0,45,140,.5);
+    box-shadow:4px 4px 0 rgba(34, 57, 105,.5);
 }
 .party-member::after{
     content:"";
@@ -169,7 +169,7 @@ body{
     left:15%;
     width:70%;
     height:6px;
-    background:#ffd928;
+    background:#049923;
     transform:skew(-10deg);
 }
 .controls{
