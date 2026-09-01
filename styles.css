@@ -209,7 +209,7 @@ body{
     font-weight:900;
     text-shadow:none;
 }
-.wallet::before{
+.clock-container::before{
     content:"";
     position:absolute;
     top:-20px;
@@ -221,7 +221,7 @@ body{
     z-index:-1;
 }
 
-.wallet::after{
+.clock-container::after{
     content:"";
     position:absolute;
     bottom:-40px;
@@ -242,7 +242,7 @@ body{
         transform:scale(.8);
         transform-origin:top right;
     }
-    .wallet{
+    .clock-container{
         left:30px;
     }
 }
@@ -250,12 +250,12 @@ body{
     .menu::after{
         width:30%;
     }
-    .wallet{
+    .clock-container{
         top:25px;
         left:20px;
         width:170px;
     }
-    .money{
+    .clock{
         font-size:1.5rem;
     }
     .main-menu{
@@ -267,7 +267,7 @@ body{
         letter-spacing:-2px;
     }
     .msgbox{
-        display:none;
+        display:flex;
     }
     .controls{
         right:20px;
