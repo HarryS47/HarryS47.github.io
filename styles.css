@@ -135,7 +135,7 @@ body{
     transform:translateY(-50%) translateX(-5px);
     z-index:-2;
 }
-.party{
+.msgbox{
     position:absolute;
     top:30px;
     right:35px;
@@ -144,7 +144,7 @@ body{
     gap:15px;
     z-index:15;
 }
-.party-member{
+.msg{
     position:relative;
     width:130px;
     height:65px;
@@ -162,7 +162,7 @@ body{
     transform:skew(-12deg);
     box-shadow:4px 4px 0 rgba(34, 57, 105,.5);
 }
-.party-member::after{
+.msg::after{
     content:"";
     position:absolute;
     bottom:5px;
@@ -237,7 +237,7 @@ body{
     .main-menu{
         left:35%;
     }
-    .party{
+    .msgbox{
         right:20px;
         transform:scale(.8);
         transform-origin:top right;
@@ -266,7 +266,7 @@ body{
         font-size:clamp(1.8rem,9vw,3rem);
         letter-spacing:-2px;
     }
-    .party{
+    .msgbox{
         display:none;
     }
     .controls{
