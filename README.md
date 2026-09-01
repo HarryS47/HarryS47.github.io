@@ -1,3 +1,8 @@
-# Testing Grounds
-A lot of this website is dedicated towards Isabella, but it also is serving as a means for me to test code and see how it works. I am using sources like W3 Schools, as well as my former GMU classes, chatGPT, and more to help me better learn and understand what I'm trying to do. For now, this is how its going to continue, until I feel confident enough to make it on my own.
+# What is this the purpose of this project site?
+This is a stylized website dedicated towards personal projects of mine— ones that interest me or stuff that I find fun!
+
+Goals:
+
+1: Persona 3 style website, with custom colors, details, and pages. I really liked the game, and I felt that it's unique design was something that I would try to recreate with this website. 
+
 
