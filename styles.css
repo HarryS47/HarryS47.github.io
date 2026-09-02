@@ -274,10 +274,11 @@ body{
         bottom:20px;
     }
     /* Floating images */
+/* Floating images */
 .floating-images{
     position:absolute;
     top:0;
-    right:0;
+    left:48%;
     width:52%;
     height:100%;
     overflow:hidden;
@@ -288,13 +289,16 @@ body{
 
 .floating-images img{
     position:absolute;
+    left:auto;
     bottom:-100px;
     width:45px;
     height:45px;
     object-fit:contain;
     pointer-events:none;
     user-select:none;
-    animation:floatUp 10s linear infinite;
+    animation-name:floatUp;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
 }
 
 /* Individual image positions, sizes, and speeds */
@@ -380,7 +384,8 @@ body{
 
 @keyframes floatUp{
     0%{
-        transform:translate(0,0) rotate(0deg);
+        bottom:-100px;
+        transform:translateX(0) rotate(0deg);
         opacity:0;
     }
 
@@ -389,20 +394,25 @@ body{
     }
 
     25%{
-        transform:translate(20px,-25vh) rotate(45deg);
+        bottom:25%;
+        transform:translateX(20px) rotate(45deg);
     }
 
     50%{
-        transform:translate(-15px,-50vh) rotate(90deg);
+        bottom:50%;
+        transform:translateX(-15px) rotate(90deg);
     }
 
     75%{
-        transform:translate(20px,-75vh) rotate(135deg);
+        bottom:75%;
+        transform:translateX(20px) rotate(135deg);
     }
 
     100%{
-        transform:translate(-10px,-120vh) rotate(180deg);
+        bottom:110%;
+        transform:translateX(-10px) rotate(180deg);
         opacity:0;
     }
-}
-}
+  }
+ }
+
