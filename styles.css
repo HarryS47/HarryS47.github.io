@@ -172,43 +172,6 @@ body{
     background:#ffffff;
     transform:skew(-10deg);
 }
-.controls{
-    position:absolute;
-    right:45px;
-    bottom:35px;
-    z-index:20;
-    text-align:right;
-    transform:skew(-5deg);
-}
-
-.skill-prompt{
-    margin-bottom:5px;
-    font-size:clamp(1.3rem,2vw,2rem);
-    font-weight:900;
-    font-style:italic;
-    text-shadow:3px 3px 0 #071b69;
-}
-
-.buttons{
-    font-size:1.1rem;
-    font-weight:700;
-    text-shadow:2px 2px 0 #071b69;
-}
-
-.buttons span{
-    display:inline-flex;
-    width:30px;
-    height:30px;
-    margin-left:8px;
-    align-items:center;
-    justify-content:center;
-    border:2px solid #fff;
-    border-radius:50%;
-    background:#fff;
-    color:#1245a0;
-    font-weight:900;
-    text-shadow:none;
-}
 .clock-container::before{
     content:"";
     position:absolute;
