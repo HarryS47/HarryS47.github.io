@@ -369,6 +369,7 @@ body{
         transform:translateX(-10px) rotate(180deg);
         opacity:0;
     }
+}
 @media(max-width:900px){
     .main-menu{
         left:35%;
