@@ -232,49 +232,6 @@ body{
     transform:rotate(8deg);
     z-index:-1;
 }
-
-@media(max-width:900px){
-    .main-menu{
-        left:35%;
-    }
-    .msgbox{
-        right:20px;
-        transform:scale(.8);
-        transform-origin:top right;
-    }
-    .clock-container{
-        left:30px;
-    }
-}
-@media(max-width:650px){
-    .menu::after{
-        width:30%;
-    }
-    .clock-container{
-        top:25px;
-        left:20px;
-        width:170px;
-    }
-    .clock{
-        font-size:1.5rem;
-    }
-    .main-menu{
-        top:28%;
-        left:25%;
-    }
-    .main-menu a{
-        font-size:clamp(1.8rem,9vw,3rem);
-        letter-spacing:-2px;
-    }
-    .msgbox{
-        display:flex;
-    }
-    .controls{
-        right:20px;
-        bottom:20px;
-    }
-    /* Floating images */
-/* Floating images */
 .floating-images{
     position:absolute;
     top:0;
@@ -301,7 +258,6 @@ body{
     animation-iteration-count:infinite;
 }
 
-/* Individual image positions, sizes, and speeds */
 .floating-images img:nth-child(1){
     left:8%;
     width:35px;
@@ -412,6 +368,46 @@ body{
         bottom:110%;
         transform:translateX(-10px) rotate(180deg);
         opacity:0;
+    }
+@media(max-width:900px){
+    .main-menu{
+        left:35%;
+    }
+    .msgbox{
+        right:20px;
+        transform:scale(.8);
+        transform-origin:top right;
+    }
+    .clock-container{
+        left:30px;
+    }
+}
+@media(max-width:650px){
+    .menu::after{
+        width:30%;
+    }
+    .clock-container{
+        top:25px;
+        left:20px;
+        width:170px;
+    }
+    .clock{
+        font-size:1.5rem;
+    }
+    .main-menu{
+        top:28%;
+        left:25%;
+    }
+    .main-menu a{
+        font-size:clamp(1.8rem,9vw,3rem);
+        letter-spacing:-2px;
+    }
+    .msgbox{
+        display:flex;
+    }
+    .controls{
+        right:20px;
+        bottom:20px;
     }
   }
  }
