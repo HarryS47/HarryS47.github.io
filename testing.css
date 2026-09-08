@@ -1,1 +1,19 @@
-
+*{box-sizing:border-box}
+html,body{
+    margin:0;
+    width:100%;
+    height:100%;
+}
+body{
+    overflow:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#062c91;
+}
+.statlines{
+  position:relative;
+  wisth:100vw;
+  height:100vh;
+  overflow:hidden;
+  color:grey;
+  background:blue;
+}
