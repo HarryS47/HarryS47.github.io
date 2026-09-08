@@ -16,7 +16,7 @@ body{
   height:100vh;
   overflow:hidden;
   color:grey;
-  background:blue;
+  background:white;
 }
 .statlines{
     position:absolute;
