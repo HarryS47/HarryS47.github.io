@@ -24,7 +24,7 @@ body{
     width: max-content;
     padding: 0;
     color: #85007a;
-    font-size: 19vmin;
+    font-size: min(17vmin,calc(6.4vw + 5.8vh));
     font-weight: 900;
     font-style: italic;
     line-height: 0.85;
@@ -33,14 +33,18 @@ body{
     text-transform: uppercase;
     transform: rotate(-48deg);
     transform-origin: left top;
-    left: 1.5vmin;
-    top: 86vmin;
+    left: calc(35.2vw + 31.69vh - 5.196em - 1.574vmin);
+    top: calc(4.5em + 1vmin);
 }
 @media (max-width:480px), (max-height:480px){
     .statlines{
-        font-size:18vmin;
+        font-size:min(16vmin,calc(6vw + 5.4vh));
+    }
+}
+@media (max-aspect-ratio:1/1){
+    .statlines{
         left:1vmin;
-        top:82vmin;
+        top:calc(39.06vw + 35.2vh - 1.271em - 1.858vmin);
     }
 }
 .menu{
