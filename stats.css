@@ -7,7 +7,7 @@ html,body{
 body{
     overflow:hidden;
     font-family:Arial,Helvetica,sans-serif;
-    background:#062c91;
+    background:#cc32cc;
 }
 .stats{
     position:absolute;
@@ -27,6 +27,8 @@ body{
     font-size: min(17vmin,calc(6.4vw + 5.8vh));
     font-weight: 900;
     font-style: italic;
+    -webkit-text-stroke: 0.025em white;
+    paint-order: stroke fill;
     line-height: 0.85;
     letter-spacing: -0.015em;
     text-decoration: none;
