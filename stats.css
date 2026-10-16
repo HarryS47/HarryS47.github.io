@@ -27,8 +27,6 @@ body{
     font-size: min(17vmin,calc(6.4vw + 5.8vh));
     font-weight: 900;
     font-style: italic;
-    -webkit-text-stroke: 0.025em white;
-    paint-order: stroke fill;
     line-height: 0.85;
     letter-spacing: -0.015em;
     text-decoration: none;
@@ -46,7 +44,7 @@ body{
 @media (max-aspect-ratio:1/1){
     .statlines{
         left:1vmin;
-        top:calc(39.06vw + 35.2vh - 1.271em - 1.858vmin);
+        top:calc(39.06vw + 35.2vh - 1.42em - 1.858vmin);
     }
 }
 .menu{
@@ -226,5 +224,12 @@ body{
     .box-content{
         font-size:clamp(10px,2.2vh,12px);
         line-height:1.05;
+    }
+}
+@media (max-width:900px) and (max-height:500px){
+    .statlines{
+        font-size:min(13.5vmin,calc(5.0625vw + 4.59vh));
+        left:calc(35.2vw + 31.69vh - 5.296em - 1.574vmin);
+        top:calc(4.42em + 1vmin);
     }
 }
