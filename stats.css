@@ -36,6 +36,28 @@ body{
     left: calc(35.2vw + 31.69vh - 5.196em - 1.574vmin);
     top: calc(4.5em + 1vmin);
 }
+.rbutton {
+    position:absolute;
+    right:clamp(12px,3vmin,36px);
+    bottom:clamp(12px,3vmin,36px);
+    z-index:10;
+    display:block;
+    width:max-content;
+    padding:0 clamp(8px,2vmin,20px);
+    color: #f3edf2;
+    font-size:clamp(1.25rem,4vmin,3rem);
+    font-weight:900;
+    font-style:italic;
+    line-height:.78;
+    letter-spacing:clamp(-4px,-0.25vmin,-1px);
+    text-decoration:none;
+    text-transform:uppercase;
+    text-shadow:3px 3px 0 rgba(0, 0, 0, 0.7);
+}
+.rbutton a{
+    color:inherit;
+    text-decoration:none;
+}
 @media (max-width:480px), (max-height:480px){
     .statlines{
         font-size:min(16vmin,calc(6vw + 5.4vh));
