@@ -7,7 +7,7 @@ html,body{
 body{
     overflow:hidden;
     font-family:Arial,Helvetica,sans-serif;
-    background:#ff5405;
+    background:#d3240d;
 }
 .tagline{
     position: absolute;
@@ -18,7 +18,7 @@ body{
     white-space: nowrap;
     width: max-content;
     padding: 0;
-    color: #ff9100;
+    color: #e7270d;
     font-size: min(17vmin,calc(6.4vw + 5.8vh));
     font-weight: 900;
     font-style: italic;
@@ -58,7 +58,7 @@ body{
     overflow:hidden;
     color:rgb(255, 255, 255);
     background:
-        linear-gradient(180deg,rgb(228, 175, 3) 0%,rgba(212, 165, 10, 0.8) 35%,rgba(136, 75, 5, 0.98) 100%);
+        linear-gradient(180deg,rgb(201, 6, 6) 0%,rgba(241, 34, 7, 0.8) 35%,rrgba(248, 21, 4, 0.98)100%);
 }
 .menu::before{
     content:"";
@@ -78,23 +78,7 @@ body{
     pointer-events:none;
     z-index:1;
 }
-
-.letter-message{
-    position:absolute;
-    z-index:2;
-    top:calc(35.3% + clamp(12px,2vh,24px));
-    left:50%;
-    transform:translateX(-50%);
-    width:min(82vw,56rem);
-    height:min(clamp(7rem,40vh,28rem),calc(64.7vh - clamp(12px,2vh,24px) - 5rem));
-    padding:clamp(12px,2.5vmin,28px);
-    overflow-y:auto;
-    border:1px solid rgba(112,75,15,0.28);
-    border-radius:clamp(8px,1.5vmin,16px);
-    background:rgba(255,255,255,0.9);
-    box-shadow:0 8px 24px rgba(0,0,0,0.2);
-    color:#3d2e16;
-    font-size:clamp(1rem,2.2vmin,1.4rem);
-    line-height:1.5;
-    overflow-wrap:anywhere;
+.img {
+  max-width: 100%;
+  height: auto;
 }
