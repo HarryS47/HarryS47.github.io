@@ -79,6 +79,21 @@ body{
     z-index:1;
 }
 .img {
-  max-width: 100%;
-  height: auto;
+position:absolute;
+z-index:2;
+top:calc(35.3% + clamp(12px,2vh,24px));
+left:50%;
+transform:translateX(-50%);
+width:min(82vw,56rem);
+height:min(clamp(7rem,40vh,28rem),calc(64.7vh - clamp(12px,2vh,24px) - 5rem));
+padding:clamp(12px,2.5vmin,28px);
+overflow-y:auto;
+border:1px solid rgba(112,75,15,0.28);
+border-radius:clamp(8px,1.5vmin,16px);
+background:rgba(255,255,255,0.9);
+box-shadow:0 8px 24px rgba(0,0,0,0.2);
+color:#3d2e16;
+font-size:clamp(1rem,2.2vmin,1.4rem);
+line-height:1.5;
+overflow-wrap:anywhere;
 }
